@@ -15,12 +15,12 @@ const { numOfPages, currPage } = Astro.props
         : currPage === 2
         ? '/'
         : `/pages/${currPage - 1}`}
-      class={currPage === 1 ? 'cursor-not-allowed' : ''}
+      class={currPage === 1 ? 'cursor-not-allowed' : 'group'}
     >
       <span class="sr-only">Previous</span>
       <svg
         aria-hidden="true"
-        class="w-6 h-6 fill-gray-800"
+        class="w-6 h-6 fill-gray-800 group-hover:fill-blue-500 duration-300"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -46,12 +46,12 @@ const { numOfPages, currPage } = Astro.props
     <!-- -->
     <a
       href={currPage === numOfPages ? null : `/pages/${currPage + 1}`}
-      class={currPage === numOfPages ? 'cursor-not-allowed' : ''}
+      class={currPage === numOfPages ? 'cursor-not-allowed' : 'group'}
     >
       <span class="sr-only">Next</span>
       <svg
         aria-hidden="true"
-        class="w-6 h-6 fill-gray-800"
+        class="w-6 h-6 fill-gray-800 group-hover:fill-blue-500 duration-300"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
