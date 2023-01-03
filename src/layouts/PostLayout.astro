@@ -55,7 +55,9 @@ const { frontmatter } = Astro.props
           </div>
         </header>
 
-        <article class="prose max-w-none">
+        <article
+          class="prose max-w-none prose-img:rounded-md prose-a:text-blue-500"
+        >
           <slot />
         </article>
       </section>
