@@ -34,7 +34,7 @@ const { frontmatter } = Astro.props
 
     <title>{frontmatter.title}</title>
   </head>
-  <body>
+  <body class="dark:bg-neutral-900 bg-neutral-100">
     <main class="container max-w-3xl mx-auto">
       <Navbar />
 
@@ -51,18 +51,22 @@ const { frontmatter } = Astro.props
               <img src="/images/non_profile.jpg" alt="profile_image" />
             </div>
             <p>{frontmatter.author}</p>
-            <span class="text-sm text-gray-800">{frontmatter.createdAt}</span>
+            <span class="text-sm text-gray-800 dark:text-gray-200"
+              >{frontmatter.createdAt}</span
+            >
           </div>
         </header>
 
         <article
-          class="prose max-w-none prose-img:rounded-md prose-a:text-blue-500"
+          class="prose dark:prose-invert max-w-none prose-img:rounded-md prose-a:text-blue-500"
         >
           <slot />
         </article>
       </section>
 
-      <footer class="text-center text-sm text-gray-800 my-12">
+      <footer
+        class="text-center text-sm text-gray-800 dark:text-gray-200 my-12"
+      >
         © 2022 <a href="https://github.com/qu1etboy">Qu1etboy</a> All rights reserved.
       </footer>
     </main>

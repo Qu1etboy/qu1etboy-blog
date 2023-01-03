@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
-html {
+:root {
   font-family: 'Kanit', sans-serif;
+
+  color-scheme: light dark;
 }
