@@ -35,19 +35,19 @@ export default function ThemeToggleButton() {
   }, [theme])
 
   return (
-    isMounted && (
-      <button
-        aria-label="Theme Dark Mode"
-        type="button"
-        className="m-3 p-3 text-xl text-white dark:text-neutral-900 rounded-md bg-blue-500 dark:bg-yellow-500 duration-300 ease-in-out hover:bg-blue-700 dark:hover:bg-yellow-600"
-        onClick={toggleTheme}
-      >
+    <button
+      aria-label="Theme Dark Mode"
+      type="button"
+      className="h-12 w-12  p-3 text-xl text-white dark:text-neutral-900 rounded-md bg-blue-500 dark:bg-yellow-500 duration-300 ease-in-out hover:bg-blue-700 dark:hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-yellow-300"
+      onClick={toggleTheme}
+    >
+      {isMounted && (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          className="w-5 h-5 text-gray-200 dark:text-gray-800 fill-gray-200 dark:fill-transparent"
+          className="w-5 h-5 text-gray-200 dark:text-gray-800 fill-gray-200 dark:fill-transparent mx-auto"
         >
           {theme === 'dark' ? (
             <path
@@ -65,7 +65,7 @@ export default function ThemeToggleButton() {
             />
           )}
         </svg>
-      </button>
-    )
+      )}
+    </button>
   )
 }

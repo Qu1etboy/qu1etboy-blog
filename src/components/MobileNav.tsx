@@ -36,13 +36,13 @@ export default function MobileNav() {
           <ul className="flex flex-col">
             <a
               href="https://qu1etboy.vercel.app"
-              className="hover:bg-gray-200 p-5 duration-300"
+              className="hover:bg-gray-200 dark:hover:bg-neutral-800 p-5 text-gray-800 dark:text-gray-100 duration-300"
             >
               About
             </a>
             <a
               href=""
-              className="inline-flex items-center p-5 gap-2 hover:bg-gray-200 duration-300"
+              className="inline-flex items-center p-5 gap-2 text-gray-800 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-neutral-800 duration-300"
             >
               Source{' '}
               <svg

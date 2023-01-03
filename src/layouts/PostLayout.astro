@@ -33,6 +33,27 @@ const { frontmatter } = Astro.props
     <meta name="twitter:image" content={frontmatter.thumbnail} />
 
     <title>{frontmatter.title}</title>
+
+    <script is:inline>
+      const theme = (() => {
+        if (
+          typeof localStorage !== 'undefined' &&
+          localStorage.getItem('theme')
+        ) {
+          return localStorage.getItem('theme')
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark'
+        }
+        return 'light'
+      })()
+
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark')
+      } else {
+        document.documentElement.classList.add('dark')
+      }
+    </script>
   </head>
   <body class="dark:bg-neutral-900 bg-neutral-100">
     <main class="container max-w-3xl mx-auto">
