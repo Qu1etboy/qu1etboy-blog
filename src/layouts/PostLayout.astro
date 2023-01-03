@@ -1,6 +1,8 @@
 ---
 import Navbar from '../components/Navbar.astro'
+import BaseHead from '../components/BaseHead.astro'
 import '../styles/global.css'
+import Footer from '../components/Footer.astro'
 
 const { frontmatter } = Astro.props
 ---
@@ -8,52 +10,11 @@ const { frontmatter } = Astro.props
 <!DOCTYPE html>
 <html lang="th">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="robots" content="follow, index" />
-    <meta name="description" content={frontmatter.description} />
-    <meta name="generator" content={Astro.generator} />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="180x180"
-      href="https://qu1etboy.vercel.app/static/images/qu1etboy.jpeg"
+    <BaseHead
+      title={frontmatter.title}
+      description={frontmatter.description}
+      image={frontmatter.thumbnail}
     />
-
-    <meta name="og:title" content={frontmatter.title} />
-    <meta name="og:description" content={frontmatter.description} />
-    <meta name="og:image" content={frontmatter.thumbnail} />
-    <meta name="og:site_name" content="Qu1etboy Blog" />
-    <meta name="og:type" content="website" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={frontmatter.title} />
-    <meta name="twitter:description" content={frontmatter.description} />
-    <meta name="twitter:site" content="@WeerawongNon" />
-    <meta name="twitter:image" content={frontmatter.thumbnail} />
-
-    <title>{frontmatter.title}</title>
-
-    <script is:inline>
-      const theme = (() => {
-        if (
-          typeof localStorage !== 'undefined' &&
-          localStorage.getItem('theme')
-        ) {
-          return localStorage.getItem('theme')
-        }
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          return 'dark'
-        }
-        return 'light'
-      })()
-
-      if (theme === 'light') {
-        document.documentElement.classList.remove('dark')
-      } else {
-        document.documentElement.classList.add('dark')
-      }
-    </script>
   </head>
   <body class="dark:bg-neutral-900 bg-neutral-100">
     <main class="container max-w-3xl mx-auto">
@@ -79,7 +40,6 @@ const { frontmatter } = Astro.props
             >
           </div>
         </header>
-
         <article
           class="prose dark:prose-invert max-w-none prose-img:rounded-md prose-a:text-blue-500"
         >
@@ -87,11 +47,7 @@ const { frontmatter } = Astro.props
         </article>
       </section>
 
-      <footer
-        class="text-center text-sm text-gray-800 dark:text-gray-200 my-12"
-      >
-        © 2022 <a href="https://github.com/qu1etboy">Qu1etboy</a> All rights reserved.
-      </footer>
+      <Footer />
     </main>
   </body>
 </html>
