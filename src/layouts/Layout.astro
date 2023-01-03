@@ -14,8 +14,33 @@ const { title } = Astro.props
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="robots" content="follow, index" />
+    <meta name="description" content="My personal blog" />
     <meta name="generator" content={Astro.generator} />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="180x180"
+      href="https://qu1etboy.vercel.app/static/images/qu1etboy.jpeg"
+    />
+
+    <meta name="og:title" content="Qu1etboy blog" />
+    <meta name="og:description" content="My personal blog" />
+    <meta
+      name="og:image"
+      content="https://qu1etboy.vercel.app/static/images/qu1etboy.jpeg"
+    />
+    <meta name="og:site_name" content="Qu1etboy Blog" />
+    <meta name="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Qu1etboy blog" />
+    <meta name="twitter:description" content="My personal blog" />
+    <meta name="twitter:site" content="@WeerawongNon" />
+    <meta
+      name="twitter:image"
+      content="https://qu1etboy.vercel.app/static/images/qu1etboy.jpeg"
+    />
     <title>{title}</title>
   </head>
   <body>

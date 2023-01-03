@@ -2,21 +2,37 @@
 import Navbar from '../components/Navbar.astro'
 import '../styles/global.css'
 
-export interface Props {
-  title: string
-}
-
-const { title, frontmatter } = Astro.props
+const { frontmatter } = Astro.props
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="robots" content="follow, index" />
+    <meta name="description" content={frontmatter.description} />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="180x180"
+      href="https://qu1etboy.vercel.app/static/images/qu1etboy.jpeg"
+    />
+
+    <meta name="og:title" content={frontmatter.title} />
+    <meta name="og:description" content={frontmatter.description} />
+    <meta name="og:image" content={frontmatter.thumbnail} />
+    <meta name="og:site_name" content="Qu1etboy Blog" />
+    <meta name="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={frontmatter.title} />
+    <meta name="twitter:description" content={frontmatter.description} />
+    <meta name="twitter:site" content="@WeerawongNon" />
+    <meta name="twitter:image" content={frontmatter.thumbnail} />
+
+    <title>{frontmatter.title}</title>
   </head>
   <body>
     <main class="container max-w-3xl mx-auto">
