@@ -4,7 +4,7 @@ title: การเรียนรู้เขียนโปรแกรมข�
 author: Weerawong Vonggatunyu
 authorImg:
 slug: my-learning-process
-category: lifestyle
+categories: [lifestyle, coding]
 createdAt: 3/1/2023
 editedAt: 3/1/2023
 thumbnail: https://images.unsplash.com/photo-1520085601670-ee14aa5fa3e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80

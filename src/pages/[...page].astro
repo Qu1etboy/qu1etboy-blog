@@ -9,7 +9,7 @@ interface Frontmatter {
   author: string
   authorImg: string
   slug: string
-  category: string
+  categories: string[]
   createdAt: string
   editedAt: string
   thumbnail: string
@@ -32,7 +32,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 const { page } = Astro.props
 ---
 
-<Layout title="Qu1etboy blog">
+<Layout title="Qu1etboy Blog">
   <section class="px-5">
     <h3
       class="text-center bg-slate-300/50 dark:bg-neutral-700/30 rounded-lg p-3"
@@ -48,6 +48,7 @@ const { page } = Astro.props
             body=""
             href={`/posts/${post.frontmatter.slug}`}
             thumbnail={post.frontmatter.thumbnail}
+            categories={post.frontmatter.categories}
           />
         ))
       }
