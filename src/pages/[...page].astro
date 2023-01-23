@@ -34,8 +34,13 @@ const { page } = Astro.props
 
 <Layout title="Qu1etboy blog">
   <section class="px-5">
+    <h3
+      class="text-center bg-slate-300/50 dark:bg-neutral-700/30 rounded-lg p-3"
+    >
+      Blog about sharing the things I learned, like a note for myself. and also
+      about my life and other stuff
+    </h3>
     <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-5">
-      <!--List the array of astronaut info-->
       {
         page.data.map((post: any) => (
           <Card
