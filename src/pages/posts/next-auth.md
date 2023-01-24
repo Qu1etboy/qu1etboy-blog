@@ -5,8 +5,8 @@ author: Weerawong Vonggatunyu
 authorImg:
 slug: next-auth
 categories: [next.js, next-auth]
-createdAt: 24/1/2023
-editedAt: 24/1/2023
+createdAt: 1-24-2023
+editedAt: 1-24-2023
 thumbnail: https://next-auth.js.org/img/social-media-card.png
 description:
 ---

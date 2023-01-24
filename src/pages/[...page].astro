@@ -17,8 +17,15 @@ interface Frontmatter {
 }
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
-  const posts = await Astro.glob<Frontmatter>('./posts/*.md')
+  const posts = (await Astro.glob<Frontmatter>('./posts/*.md')).sort(
+    (a: any, b: any) =>
+      new Date(b.frontmatter.createdAt).valueOf() -
+      new Date(a.frontmatter.createdAt).valueOf()
+  )
+
+  console.log(posts)
   // Generate pages from our array of astronauts, with 2 to a page
+
   const pages = paginate(posts, { pageSize: 2 })
 
   return pages.map((page, idx: number) => ({
