@@ -24,7 +24,9 @@ function formatDate(date: string) {
       image={frontmatter.thumbnail}
     />
   </head>
-  <body class="dark:bg-neutral-900 bg-neutral-100">
+  <body
+    class="dark:bg-neutral-900 bg-neutral-100 text-gray-800 dark:text-gray-100"
+  >
     <main class="container max-w-3xl mx-auto">
       <Navbar />
 
@@ -35,17 +37,15 @@ function formatDate(date: string) {
             alt="thumbnail"
             class="rounded-md mb-5"
           />
-          <h1 class="text-4xl font-bold text-gray-800 dark:text-gray-100">
+          <h1 class="text-4xl font-bold">
             {frontmatter.title}
           </h1>
           <div class="flex gap-2 items-center mt-3">
             <div class="rounded-full w-8 h-8 overflow-hidden">
               <img src="/images/non_profile.jpg" alt="profile_image" />
             </div>
-            <p class="text-gray-800 dark:text-gray-100">{frontmatter.author}</p>
-            <span class="text-sm text-gray-800 dark:text-gray-200"
-              >{formatDate(frontmatter.createdAt)}</span
-            >
+            <p>{frontmatter.author}</p>
+            <span class="text-sm">{formatDate(frontmatter.createdAt)}</span>
           </div>
         </header>
         <article
@@ -53,6 +53,14 @@ function formatDate(date: string) {
         >
           <slot />
         </article>
+        <p class="mt-8">
+          If you found anything wrong with this post you can
+          <a
+            class="text-blue-500"
+            href={`https://github.com/Qu1etboy/qu1etboy-blog/edit/main/src/pages/posts/${frontmatter.slug}.md`}
+            >Edit this page on GitHub</a
+          >
+        </p>
       </section>
 
       <Footer />

@@ -359,3 +359,5 @@ We have learn how to install and setup a Nest.js project with Prisma and GraphQL
 
 - https://docs.nestjs.com/graphql/quick-start#schema-first
 - https://www.youtube.com/watch?v=twi33GVRazE&t=631s&ab_channel=RichardHong
+
+---
