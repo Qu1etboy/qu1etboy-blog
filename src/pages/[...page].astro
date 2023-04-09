@@ -23,10 +23,10 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
       new Date(a.frontmatter.createdAt).valueOf()
   )
 
-  console.log(posts)
+  // console.log(posts)
   // Generate pages from our array of astronauts, with 2 to a page
 
-  const pages = paginate(posts, { pageSize: 2 })
+  const pages = paginate(posts, { pageSize: 6 })
 
   return pages.map((page, idx: number) => ({
     ...page,
