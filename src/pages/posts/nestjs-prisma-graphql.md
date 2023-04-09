@@ -126,7 +126,7 @@ Install prisma client and generate prisma schema to prisma client
 pnpm add @prisma/client && npx prisma generate
 ```
 
-Create a Prisma Service inside out Nest.js application
+Create a Prisma Service inside our Nest.js application
 
 ```ts
 // src/prisma/prisma.service.ts
@@ -182,6 +182,8 @@ GraphQLModule.forRoot<ApolloDriverConfig>({
   },
 }),
 ```
+
+run `pnpm start:dev` to generate a `graphql.ts` which will contain GraphQL types
 
 ## 5. Create our Pet resources
 
@@ -328,7 +330,7 @@ $ pnpm run start:prod
 
 go to `localhost:3000/graphql` to see the graphql playground. You can start playing around with it. We will cover how to used GraphQL in next chapter so stay tuned.
 
-You can see your database table with Prisma Studio
+You can see your database table with [Prisma Studio](https://www.prisma.io/studio)
 
 ```bash
 npx prisma studio
